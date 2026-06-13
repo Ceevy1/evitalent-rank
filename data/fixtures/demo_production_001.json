@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "doc_demo_production_001",
+  "candidate_id": "demo_production_001",
+  "parse_metadata": {"source_type": "fixture", "parsed_at": "2026-05-25T00:00:00Z", "parser_version": "v1", "redacted_text_path": null},
+  "sensitive_information": {"name_present": false, "gender": null, "birth_date_present": false, "age_present": false, "marital_status_present": false, "family_status_present": false, "native_place_present": false, "current_salary_present": false, "expected_salary_present": false, "redaction_notes": []},
+  "candidate_profile": {"display_id": "CAND-PROD-001", "target_domains": ["production"], "summary": "生产运营经理，熟悉质量、成本、自动化和 GMP 管理。", "highest_degree": "本科", "major": "工业工程", "total_years_experience": 11, "current_level": "生产经理"},
+  "education_records": [{"school": "脱敏大学D", "degree": "本科", "major": "工业工程", "start_date": "2009-09", "end_date": "2013-06", "evidence_id": "ev_prod_edu"}],
+  "career_records": [
+    {"company": "脱敏制造工厂", "title": "生产主管", "start_date": "2013-07", "end_date": "2018-12", "description": "负责生产计划、SOP 和 7S 现场管理。", "domain_tags": ["production"], "management_headcount": 28, "platform_evidence": ["多产线工厂"], "evidence_id": "ev_prod_job1"},
+    {"company": "脱敏食品制造集团", "title": "生产经理", "start_date": "2019-01", "end_date": "2025-12", "description": "推动工艺优化、设备引入、GMP 和自动化改造。", "domain_tags": ["production"], "management_headcount": 86, "platform_evidence": ["GMP 车间", "自动化产线"], "evidence_id": "ev_prod_job2"}
+  ],
+  "project_records": [{"project_name": "自动化包装线建设", "start_date": "2020-04", "end_date": "2021-01", "description": "完成设备选型、上线验证和 SOP 固化。", "domain_tags": ["production"], "evidence_id": "ev_prod_project"}],
+  "achievement_events": [
+    {"achievement_id": "ach_prod_001", "event_type": "efficiency_improvement", "metric_name": "产出率提升", "metric_value": 16, "metric_value_upper": null, "unit": "%", "direction": "increase", "period_months": 10, "approximate": false, "lower_bound": false, "candidate_contribution": "主导工艺优化和排产规则", "evidence_grade": "A", "evidence_id": "ev_prod_ach1"},
+    {"achievement_id": "ach_prod_002", "event_type": "loss_reduction", "metric_name": "原料损耗率下降", "metric_value": 5, "metric_value_upper": null, "unit": "pct", "direction": "decrease", "period_months": 9, "approximate": false, "lower_bound": false, "candidate_contribution": "推动过程控制和质量复盘", "evidence_grade": "A", "evidence_id": "ev_prod_ach2"}
+  ],
+  "domain_assessment_inputs": {"production": {"domain": "production", "matched_tags": ["生产计划", "质量管理", "自动化改造"], "competency_tags": ["生产计划", "质量管理", "成本控制", "原料损耗", "产出率", "设备引入", "工艺优化", "自动化改造", "安全与合规", "新车间或产线建设", "SOP", "GMP", "7S"], "collaboration_tags": ["跨部门协同", "团队搭建", "组织推动"], "evidence_ids": ["ev_prod_job1", "ev_prod_job2", "ev_prod_project", "ev_prod_ach1", "ev_prod_ach2"], "notes": "生产管理能力标签覆盖较高。"}},
+  "evidence_items": [
+    {"evidence_id": "ev_prod_edu", "quote": "本科，工业工程专业。", "source_section": "教育经历"},
+    {"evidence_id": "ev_prod_job1", "quote": "负责生产计划、SOP 和 7S 现场管理。", "source_section": "工作经验"},
+    {"evidence_id": "ev_prod_job2", "quote": "推动工艺优化、设备引入、GMP 和自动化改造。", "source_section": "工作经验"},
+    {"evidence_id": "ev_prod_project", "quote": "完成自动化包装线设备选型、上线验证和 SOP 固化。", "source_section": "项目经验"},
+    {"evidence_id": "ev_prod_ach1", "quote": "产出率提升16%。", "source_section": "工作业绩"},
+    {"evidence_id": "ev_prod_ach2", "quote": "原料损耗率下降5个百分点。", "source_section": "工作业绩"}
+  ],
+  "quality_flags": [],
+  "llm_metadata": {"mode": "mock", "model": null, "temperature": 0, "extracted_at": "2026-05-25T00:00:00Z"}
+}

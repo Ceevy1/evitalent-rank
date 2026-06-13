@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "doc_demo_rd_001",
+  "candidate_id": "demo_rd_001",
+  "parse_metadata": {"source_type": "fixture", "parsed_at": "2026-05-25T00:00:00Z", "parser_version": "v1", "redacted_text_path": null},
+  "sensitive_information": {"name_present": false, "gender": null, "birth_date_present": false, "age_present": false, "marital_status_present": false, "family_status_present": false, "native_place_present": false, "current_salary_present": false, "expected_salary_present": false, "redaction_notes": []},
+  "candidate_profile": {"display_id": "CAND-RD-001", "target_domains": ["rd"], "summary": "研发项目经理，具备新产品研发、注册备案和技术转化经验。", "highest_degree": "硕士", "major": "食品科学", "total_years_experience": 8, "current_level": "研发经理"},
+  "education_records": [{"school": "脱敏大学F", "degree": "硕士", "major": "食品科学", "start_date": "2012-09", "end_date": "2015-06", "evidence_id": "ev_rd_edu"}],
+  "career_records": [
+    {"company": "脱敏研究院", "title": "研发工程师", "start_date": "2015-07", "end_date": "2019-03", "description": "负责新产品研发、技术标准和注册备案支持。", "domain_tags": ["rd"], "management_headcount": 3, "platform_evidence": ["省级研发平台"], "evidence_id": "ev_rd_job1"},
+    {"company": "脱敏食品科技集团", "title": "研发经理", "start_date": "2019-04", "end_date": "2025-12", "description": "管理研发项目、产品上市和研发团队。", "domain_tags": ["rd"], "management_headcount": 15, "platform_evidence": ["集团研发中心"], "evidence_id": "ev_rd_job2"}
+  ],
+  "project_records": [{"project_name": "功能食品新品研发", "start_date": "2020-06", "end_date": "2021-08", "description": "完成配方验证、中试、备案和商业化导入。", "domain_tags": ["rd"], "evidence_id": "ev_rd_project"}],
+  "achievement_events": [
+    {"achievement_id": "ach_rd_001", "event_type": "product_launch", "metric_name": "新品上市数量", "metric_value": 5, "metric_value_upper": null, "unit": "个", "direction": "launch", "period_months": 14, "approximate": false, "lower_bound": false, "candidate_contribution": "主导研发项目管理和上市衔接", "evidence_grade": "A", "evidence_id": "ev_rd_ach1"},
+    {"achievement_id": "ach_rd_002", "event_type": "patent_publication", "metric_name": "授权专利", "metric_value": 2, "metric_value_upper": null, "unit": "项", "direction": "increase", "period_months": 18, "approximate": false, "lower_bound": false, "candidate_contribution": "作为主要完成人参与专利撰写", "evidence_grade": "B", "evidence_id": "ev_rd_ach2"}
+  ],
+  "domain_assessment_inputs": {"rd": {"domain": "rd", "matched_tags": ["新产品研发", "产品上市", "专利和论文"], "competency_tags": ["技术领域匹配", "新产品研发", "产品上市", "专利和论文", "技术标准", "技术转化", "商业化收入", "研发项目管理", "注册备案", "研发团队管理"], "collaboration_tags": ["跨部门协同", "团队搭建", "组织推动"], "evidence_ids": ["ev_rd_job1", "ev_rd_job2", "ev_rd_project", "ev_rd_ach1", "ev_rd_ach2"], "notes": "研发全链路证据较充分。"}},
+  "evidence_items": [
+    {"evidence_id": "ev_rd_edu", "quote": "硕士，食品科学专业。", "source_section": "教育经历"},
+    {"evidence_id": "ev_rd_job1", "quote": "负责新产品研发、技术标准和注册备案支持。", "source_section": "工作经验"},
+    {"evidence_id": "ev_rd_job2", "quote": "管理研发项目、产品上市和研发团队。", "source_section": "工作经验"},
+    {"evidence_id": "ev_rd_project", "quote": "完成配方验证、中试、备案和商业化导入。", "source_section": "项目经验"},
+    {"evidence_id": "ev_rd_ach1", "quote": "14个月内推动5个新品上市。", "source_section": "工作业绩"},
+    {"evidence_id": "ev_rd_ach2", "quote": "参与2项授权专利。", "source_section": "工作业绩"}
+  ],
+  "quality_flags": [],
+  "llm_metadata": {"mode": "mock", "model": null, "temperature": 0, "extracted_at": "2026-05-25T00:00:00Z"}
+}

@@ -1,0 +1,27 @@
+version: "1.0.0"
+
+achievement_event_weights:
+  A: 1.0
+  B: 0.75
+  C: 0.25
+  D: 0.0
+
+axis_caps:
+  education: 100
+  match: 100
+  experience: 100
+  stability: 100
+  progression: 100
+  platform: 100
+  management: 100
+  competency: 100
+  achievement: 100
+  collaboration: 100
+
+normalization:
+  relevant_years_for_full_score: 8
+  median_tenure_full_months: 36
+  short_tenure_months: 12
+  management_full_headcount: 50
+  achievement_full_count: 6
+  competency_full_coverage: 0.65

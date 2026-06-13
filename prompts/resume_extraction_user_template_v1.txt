@@ -1,0 +1,13 @@
+请根据以下脱敏简历文本，输出符合 candidate_extraction.schema.json 的 JSON。
+
+文档编号：{document_id}
+候选人编号建议：{candidate_id}
+目标领域提示：{target_domain}
+
+目标 JSON Schema 简化说明：
+{schema_brief}
+
+脱敏简历文本：
+{redacted_text}
+
+请仅输出 JSON 对象。

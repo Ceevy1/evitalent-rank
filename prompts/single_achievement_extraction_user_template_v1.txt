@@ -1,0 +1,7 @@
+成果候选片段：
+{isolated_clause}
+
+关联经历上下文：
+{linked_career_context}
+
+请仅输出 RawAchievementEvent JSON，不要输出标准分类字段。

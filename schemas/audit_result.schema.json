@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://evitalent.local/schemas/audit_result.schema.json",
+  "title": "EviTalent Audit Result",
+  "type": "object",
+  "required": [
+    "audit_id",
+    "ranking_id",
+    "domain",
+    "audit_version",
+    "generated_at",
+    "timeline_audit",
+    "fairness_audit",
+    "robustness_audit",
+    "overall_conclusion",
+    "limitations"
+  ],
+  "properties": {
+    "audit_id": {"type": "string", "minLength": 1},
+    "ranking_id": {"type": "string", "minLength": 1},
+    "domain": {"type": "string", "minLength": 1},
+    "audit_version": {"type": "string", "minLength": 1},
+    "generated_at": {"type": "string", "minLength": 1},
+    "timeline_audit": {"type": "object"},
+    "fairness_audit": {"type": "object"},
+    "robustness_audit": {"type": "object"},
+    "overall_conclusion": {
+      "type": "object",
+      "required": ["overall_audit_status", "conclusion_summary"],
+      "properties": {
+        "overall_audit_status": {"enum": ["passed", "warning", "failed"]},
+        "conclusion_summary": {"type": "array", "items": {"type": "string"}},
+        "critical_issue_count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  }
+}

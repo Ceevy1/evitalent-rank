@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "doc_demo_sales_001",
+  "candidate_id": "demo_sales_001",
+  "parse_metadata": {"source_type": "mock_fixture", "parsed_at": "2026-05-26T00:00:00Z", "parser_version": "stage3_v1", "redacted_text_path": null, "source_filename": "demo_sales_redacted.txt"},
+  "sensitive_information": {"name_detected": true, "gender": null, "birth_year": null, "marital_status": null, "salary_current": null, "salary_expected": null, "location": "[地域信息已脱敏]", "masked_for_scoring": true},
+  "candidate_profile": {"display_id": "CAND-SALES-001", "target_domains": ["sales"], "target_domain_candidates": [{"domain": "sales", "confidence": 0.92, "evidence_ids": ["ev_sales_job2", "ev_sales_ach1"]}], "summary": "脱敏候选人覆盖大客户、渠道开拓和销售团队管理。", "highest_degree": "本科", "major": "工商管理", "total_years_experience": 9, "current_level": "区域销售经理"},
+  "education_records": [{"school": "脱敏大学G", "degree": "本科", "major": "工商管理", "start_date": "2011-09", "end_date": "2015-06", "evidence_id": "ev_sales_edu"}],
+  "career_records": [
+    {"company": "脱敏销售组织A", "title": "渠道销售主管", "start_date": "2015-07", "end_date": "2019-09", "description": "负责渠道开拓、门店增长和回款管理。", "domain_tags": ["sales"], "management_headcount": 8, "platform_evidence": ["区域渠道网络"], "evidence_ids": ["ev_sales_job1"], "evidence_id": "ev_sales_job1"},
+    {"company": "脱敏销售组织B", "title": "区域销售经理", "start_date": "2019-10", "end_date": "2025-12", "description": "管理大客户、区域拓展和销售团队。", "domain_tags": ["sales"], "management_headcount": 24, "platform_evidence": ["重点客户体系"], "evidence_ids": ["ev_sales_job2"], "evidence_id": "ev_sales_job2"}
+  ],
+  "project_records": [{"project_name": "区域渠道扩张", "start_date": "2021-01", "end_date": "2021-12", "description": "新开重点门店并建立经销商分层管理机制。", "domain_tags": ["sales"], "evidence_ids": ["ev_sales_project"], "evidence_id": "ev_sales_project"}],
+  "achievement_events": [
+    {"achievement_id": "ach_sales_001", "event_type": "revenue_growth", "metric_name": "年销售额", "metric_value": 9500, "metric_value_upper": null, "unit": "万元", "direction": "increase", "period_months": 12, "approximate": false, "lower_bound": false, "candidate_contribution": "主导区域目标拆解和大客户管理", "evidence_grade": "A", "evidence_id": "ev_sales_ach1"},
+    {"achievement_id": "ach_sales_002", "event_type": "efficiency_improvement", "metric_name": "目标完成率", "metric_value": 112, "metric_value_upper": null, "unit": "%", "direction": "increase", "period_months": 12, "approximate": false, "lower_bound": false, "candidate_contribution": "优化渠道结构和销售节奏", "evidence_grade": "A", "evidence_id": "ev_sales_ach2"}
+  ],
+  "domain_assessment_inputs": {"sales": {"domain": "sales", "matched_tags": ["年销售额", "目标完成率", "大客户"], "competency_tags": ["年销售额", "销售增长率", "目标完成率", "回款率", "大客户", "渠道开拓", "区域拓展", "门店增长", "毛利改善", "销售团队管理"], "collaboration_tags": ["跨部门协同", "团队搭建", "冲突处理"], "evidence_ids": ["ev_sales_job1", "ev_sales_job2", "ev_sales_project", "ev_sales_ach1", "ev_sales_ach2"], "notes": "销售成果数字充分。"}},
+  "evidence_items": [
+    {"evidence_id": "ev_sales_edu", "section": "教育经历", "quote": "本科，工商管理专业。", "fact_type": "education", "used_for_scoring": true},
+    {"evidence_id": "ev_sales_job1", "section": "工作经历", "quote": "负责渠道开拓、门店增长和回款管理。", "fact_type": "career", "used_for_scoring": true},
+    {"evidence_id": "ev_sales_job2", "section": "工作经历", "quote": "管理大客户、区域拓展和销售团队。", "fact_type": "career", "used_for_scoring": true},
+    {"evidence_id": "ev_sales_project", "section": "项目经历", "quote": "新开重点门店并建立经销商分层管理机制。", "fact_type": "project", "used_for_scoring": true},
+    {"evidence_id": "ev_sales_ach1", "section": "工作业绩", "quote": "年销售额9500万元。", "fact_type": "achievement", "used_for_scoring": true},
+    {"evidence_id": "ev_sales_ach2", "section": "工作业绩", "quote": "年度目标完成率112%。", "fact_type": "achievement", "used_for_scoring": true}
+  ],
+  "quality_flags": [],
+  "llm_metadata": {"provider": "mock", "model_name": "mock_fixture_v1", "temperature": 0, "extracted_at": "2026-05-26T00:00:00Z"}
+}

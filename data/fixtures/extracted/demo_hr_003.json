@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "doc_demo_hr_003",
+  "candidate_id": "demo_hr_003",
+  "parse_metadata": {"source_type": "mock_fixture", "parsed_at": "2026-05-26T00:00:00Z", "parser_version": "stage3_v1", "redacted_text_path": null, "source_filename": "demo_hr_003_redacted.txt"},
+  "sensitive_information": {"name_detected": true, "gender": null, "birth_year": null, "marital_status": null, "salary_current": null, "salary_expected": null, "location": "[地域信息已脱敏]", "masked_for_scoring": true},
+  "candidate_profile": {"display_id": "CAND-HR-003", "target_domains": ["hr"], "target_domain_candidates": [{"domain": "hr", "confidence": 0.68, "evidence_ids": ["ev_hr3_job2"]}], "summary": "脱敏候选人具有基础 HR 运营经历，量化成果证据有限。", "highest_degree": "本科", "major": "行政管理", "total_years_experience": 4, "current_level": "HR 专员"},
+  "education_records": [{"school": "脱敏学院C", "degree": "本科", "major": "行政管理", "start_date": "2015-09", "end_date": "2019-06", "evidence_id": "ev_hr3_edu"}],
+  "career_records": [
+    {"company": "脱敏组织E", "title": "人事助理", "start_date": "2019-07", "end_date": "2021-05", "description": "负责人事档案、入离职手续和基础招聘。", "domain_tags": ["hr"], "management_headcount": null, "platform_evidence": ["单区域团队"], "evidence_ids": ["ev_hr3_job1"], "evidence_id": "ev_hr3_job1"},
+    {"company": "脱敏组织F", "title": "HR 专员", "start_date": "2021-06", "end_date": "2025-12", "description": "协助招聘、培训通知和员工关系材料整理。", "domain_tags": ["hr"], "management_headcount": null, "platform_evidence": [], "evidence_ids": ["ev_hr3_job2"], "evidence_id": "ev_hr3_job2"}
+  ],
+  "project_records": [{"project_name": "员工培训台账整理", "start_date": "2022-03", "end_date": "2022-08", "description": "整理课程签到和培训反馈。", "domain_tags": ["hr"], "evidence_ids": ["ev_hr3_project"], "evidence_id": "ev_hr3_project"}],
+  "achievement_events": [
+    {"achievement_id": "ach_hr3_001", "event_type": "recruitment_delivery", "metric_name": "招聘协助人数", "metric_value": 12, "metric_value_upper": null, "unit": "人", "direction": "increase", "period_months": 6, "approximate": false, "lower_bound": false, "candidate_contribution": "协助邀约和资料收集", "evidence_grade": "B", "evidence_id": "ev_hr3_ach1"},
+    {"achievement_id": "ach_hr3_002", "event_type": "organization_transformation", "metric_name": "培训反馈整理", "metric_value": null, "metric_value_upper": null, "unit": null, "direction": "other", "period_months": null, "approximate": true, "lower_bound": false, "candidate_contribution": "整理反馈表", "evidence_grade": "D", "evidence_id": "ev_hr3_ach2"}
+  ],
+  "domain_assessment_inputs": {"hr": {"domain": "hr", "matched_tags": ["招聘配置", "培训体系"], "competency_tags": ["招聘配置", "培训体系"], "collaboration_tags": ["跨部门协同"], "evidence_ids": ["ev_hr3_job1", "ev_hr3_job2", "ev_hr3_project", "ev_hr3_ach1"], "notes": "证据偏基础执行。"}},
+  "evidence_items": [
+    {"evidence_id": "ev_hr3_edu", "section": "教育经历", "quote": "本科，行政管理专业。", "fact_type": "education", "used_for_scoring": true},
+    {"evidence_id": "ev_hr3_job1", "section": "工作经历", "quote": "负责人事档案、入离职手续和基础招聘。", "fact_type": "career", "used_for_scoring": true},
+    {"evidence_id": "ev_hr3_job2", "section": "工作经历", "quote": "协助招聘、培训通知和员工关系材料整理。", "fact_type": "career", "used_for_scoring": true},
+    {"evidence_id": "ev_hr3_project", "section": "项目经历", "quote": "整理课程签到和培训反馈。", "fact_type": "project", "used_for_scoring": true},
+    {"evidence_id": "ev_hr3_ach1", "section": "工作业绩", "quote": "6个月协助招聘12人。", "fact_type": "achievement", "used_for_scoring": true},
+    {"evidence_id": "ev_hr3_ach2", "section": "个人评价", "quote": "工作认真负责。", "fact_type": "subjective_comment", "used_for_scoring": false}
+  ],
+  "quality_flags": [{"flag_type": "subjective_evidence", "severity": "info", "description": "存在主观评价，仅用于提示，不进入主评分。", "related_evidence_ids": ["ev_hr3_ach2"]}],
+  "llm_metadata": {"provider": "mock", "model_name": "mock_fixture_v1", "temperature": 0, "extracted_at": "2026-05-26T00:00:00Z"}
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>EviTalent-Rank 排名报告</title>
+  <style>
+    body { font-family: Arial, "Microsoft YaHei", sans-serif; margin: 32px; color: #17202a; line-height: 1.55; }
+    h1, h2 { margin-bottom: 8px; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0 24px; }
+    th, td { border: 1px solid #d5dde5; padding: 8px; text-align: left; vertical-align: top; }
+    th { background: #f3f6f8; }
+    .note { color: #5d6d7e; }
+    .tag { display: inline-block; padding: 2px 6px; border: 1px solid #ccd6dd; border-radius: 4px; margin: 2px; }
+  </style>
+</head>
+<body>
+  <h1>EviTalent-Rank 排名报告</h1>
+  <p class="note">领域：{{ result.domain_label }}（{{ result.domain }}）；方法版本：{{ result.ranking_method_version }}</p>
+  <p class="note">本报告仅展示候选人编号、评分、证据摘要和风险提示，不包含真实姓名、电话、出生日期、婚姻或薪资等敏感字段。</p>
+
+  <h2>排名表</h2>
+  <table>
+    <thead>
+      <tr><th>排名</th><th>候选人编号</th><th>BCS</th><th>ECI</th><th>Penalty</th><th>RankScore</th><th>核心优势</th><th>风险提示</th></tr>
+    </thead>
+    <tbody>
+      {% for item in result.candidates %}
+      <tr>
+        <td>{{ item.rank }}</td>
+        <td>{{ item.candidate_id }}</td>
+        <td>{{ "%.2f"|format(item.bcs) }}</td>
+        <td>{{ "%.2f"|format(item.eci) }}</td>
+        <td>{{ "%.2f"|format(item.penalty) }}</td>
+        <td>{{ "%.2f"|format(item.rank_score) }}</td>
+        <td>{% for s in item.top_strengths %}<span class="tag">{{ s.label }} {{ "%.1f"|format(s.score) }}</span>{% endfor %}</td>
+        <td>{{ item.risk_flags[:4]|join("；") }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h2>候选人分项</h2>
+  {% for item in result.candidates %}
+    <h3>{{ item.candidate_id }}</h3>
+    <table>
+      <tbody>
+        {% for axis, score in item.axis_scores.items() %}
+        <tr><th>{{ axis }}</th><td>{{ "%.2f"|format(score) }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p>证据摘要：证据 {{ item.evidence_summary.evidence_count }} 条；计分证据 {{ item.evidence_summary.scoring_evidence_count }} 条；成果事件 {{ item.evidence_summary.achievement_event_count }} 条。</p>
+  {% endfor %}
+
+  <h2>结论边界</h2>
+  <p>V1 为证据驱动的辅助评价系统，不等同最终录用决策。缺失字段不会直接判零分，而是通过中性基线、ECI 和风险提示表达证据不足。</p>
+</body>
+</html>

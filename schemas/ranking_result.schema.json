@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://evitalent.local/schemas/ranking_result.schema.json",
+  "title": "EviTalent Ranking Result",
+  "type": "object",
+  "required": [
+    "ranking_id",
+    "domain",
+    "domain_label",
+    "generated_at",
+    "ranking_method_version",
+    "candidates"
+  ],
+  "properties": {
+    "ranking_id": {"type": "string"},
+    "domain": {"type": "string"},
+    "domain_label": {"type": "string"},
+    "generated_at": {"type": "string"},
+    "ranking_method_version": {"type": "string"},
+    "insufficient_candidates_for_ranking": {"type": "boolean"},
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "rank",
+          "candidate_id",
+          "bcs",
+          "eci",
+          "penalty",
+          "rank_score",
+          "axis_scores",
+          "computed_features",
+          "top_strengths",
+          "risk_flags",
+          "evidence_summary"
+        ],
+        "properties": {
+          "rank": {"type": "integer", "minimum": 1},
+          "candidate_id": {"type": "string"},
+          "bcs": {"type": "number", "minimum": 0, "maximum": 100},
+          "eci": {"type": "number", "minimum": 0, "maximum": 100},
+          "penalty": {"type": "number", "minimum": 0, "maximum": 8},
+          "rank_score": {"type": "number"},
+          "axis_scores": {"type": "object", "additionalProperties": {"type": "number"}},
+          "computed_features": {"type": "object"},
+          "top_strengths": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["axis", "label", "score", "evidence_ids"],
+              "properties": {
+                "axis": {"type": "string"},
+                "label": {"type": "string"},
+                "score": {"type": "number"},
+                "evidence_ids": {"type": "array", "items": {"type": "string"}}
+              },
+              "additionalProperties": true
+            }
+          },
+          "risk_flags": {"type": "array", "items": {"type": "string"}},
+          "evidence_summary": {
+            "type": "object",
+            "required": ["evidence_count", "scoring_evidence_count", "achievement_event_count", "quantified_achievement_count"],
+            "properties": {
+              "evidence_count": {"type": "integer"},
+              "scoring_evidence_count": {"type": "integer"},
+              "achievement_event_count": {"type": "integer"},
+              "quantified_achievement_count": {"type": "integer"}
+            },
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

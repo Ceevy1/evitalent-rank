@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "doc_demo_brand_001",
+  "candidate_id": "demo_brand_001",
+  "parse_metadata": {"source_type": "mock_fixture", "parsed_at": "2026-05-26T00:00:00Z", "parser_version": "stage3_v1", "redacted_text_path": null, "source_filename": "demo_brand_redacted.txt"},
+  "sensitive_information": {"name_detected": true, "gender": null, "birth_year": null, "marital_status": null, "salary_current": null, "salary_expected": null, "location": "[地域信息已脱敏]", "masked_for_scoring": true},
+  "candidate_profile": {"display_id": "CAND-BRAND-001", "target_domains": ["brand"], "target_domain_candidates": [{"domain": "brand", "confidence": 0.91, "evidence_ids": ["ev_brand_job2", "ev_brand_ach1"]}], "summary": "脱敏候选人具备品牌定位、新品上市和多品牌管理经验。", "highest_degree": "本科", "major": "市场营销", "total_years_experience": 8, "current_level": "品牌经理"},
+  "education_records": [{"school": "脱敏大学D", "degree": "本科", "major": "市场营销", "start_date": "2012-09", "end_date": "2016-06", "evidence_id": "ev_brand_edu"}],
+  "career_records": [
+    {"company": "脱敏品牌组织A", "title": "品牌主管", "start_date": "2016-07", "end_date": "2020-08", "description": "负责品牌定位、KOL/KOC 传播和用户洞察。", "domain_tags": ["brand"], "management_headcount": 5, "platform_evidence": ["内容传播矩阵"], "evidence_ids": ["ev_brand_job1"], "evidence_id": "ev_brand_job1"},
+    {"company": "脱敏消费组织B", "title": "品牌经理", "start_date": "2020-09", "end_date": "2025-12", "description": "管理多品牌矩阵，主导品牌升级和新品上市。", "domain_tags": ["brand"], "management_headcount": 9, "platform_evidence": ["全国渠道品牌"], "evidence_ids": ["ev_brand_job2"], "evidence_id": "ev_brand_job2"}
+  ],
+  "project_records": [{"project_name": "新品牌上市项目", "start_date": "2021-05", "end_date": "2022-04", "description": "完成定位、包装、达人内容和上市节奏。", "domain_tags": ["brand"], "evidence_ids": ["ev_brand_project"], "evidence_id": "ev_brand_project"}],
+  "achievement_events": [
+    {"achievement_id": "ach_brand_001", "event_type": "product_launch", "metric_name": "新品上市销售额", "metric_value": 1800, "metric_value_upper": null, "unit": "万元", "direction": "launch", "period_months": 6, "approximate": false, "lower_bound": false, "candidate_contribution": "主导上市策略与传播节奏", "evidence_grade": "A", "evidence_id": "ev_brand_ach1"},
+    {"achievement_id": "ach_brand_002", "event_type": "roi_improvement", "metric_name": "投放 ROI 提升", "metric_value": 18, "metric_value_upper": null, "unit": "%", "direction": "increase", "period_months": 9, "approximate": false, "lower_bound": false, "candidate_contribution": "优化内容投放和媒介组合", "evidence_grade": "B", "evidence_id": "ev_brand_ach2"}
+  ],
+  "domain_assessment_inputs": {"brand": {"domain": "brand", "matched_tags": ["品牌定位", "品牌升级", "新品上市"], "competency_tags": ["品牌定位", "品牌升级", "品牌从 0 到 1", "新品上市", "KOL/KOC 与媒体传播", "用户洞察", "销售额", "ROI", "多品牌矩阵管理"], "collaboration_tags": ["跨部门协同", "组织推动"], "evidence_ids": ["ev_brand_job1", "ev_brand_job2", "ev_brand_project", "ev_brand_ach1", "ev_brand_ach2"], "notes": "品牌经验与成果较完整。"}},
+  "evidence_items": [
+    {"evidence_id": "ev_brand_edu", "section": "教育经历", "quote": "本科，市场营销专业。", "fact_type": "education", "used_for_scoring": true},
+    {"evidence_id": "ev_brand_job1", "section": "工作经历", "quote": "负责品牌定位、KOL/KOC 传播和用户洞察。", "fact_type": "career", "used_for_scoring": true},
+    {"evidence_id": "ev_brand_job2", "section": "工作经历", "quote": "管理多品牌矩阵，主导品牌升级和新品上市。", "fact_type": "career", "used_for_scoring": true},
+    {"evidence_id": "ev_brand_project", "section": "项目经历", "quote": "完成定位、包装、达人内容和上市节奏。", "fact_type": "project", "used_for_scoring": true},
+    {"evidence_id": "ev_brand_ach1", "section": "工作业绩", "quote": "新品上市6个月销售额1800万元。", "fact_type": "achievement", "used_for_scoring": true},
+    {"evidence_id": "ev_brand_ach2", "section": "工作业绩", "quote": "投放 ROI 提升18%。", "fact_type": "achievement", "used_for_scoring": true}
+  ],
+  "quality_flags": [],
+  "llm_metadata": {"provider": "mock", "model_name": "mock_fixture_v1", "temperature": 0, "extracted_at": "2026-05-26T00:00:00Z"}
+}

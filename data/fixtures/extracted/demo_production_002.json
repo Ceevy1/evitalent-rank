@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "doc_demo_production_002",
+  "candidate_id": "demo_production_002",
+  "parse_metadata": {"source_type": "mock_fixture", "parsed_at": "2026-05-26T00:00:00Z", "parser_version": "stage3_v1", "redacted_text_path": null, "source_filename": "demo_production_002_redacted.txt"},
+  "sensitive_information": {"name_detected": true, "gender": null, "birth_year": null, "marital_status": null, "salary_current": null, "salary_expected": null, "location": "[地域信息已脱敏]", "masked_for_scoring": true},
+  "candidate_profile": {"display_id": "CAND-PROD-002", "target_domains": ["production"], "target_domain_candidates": [{"domain": "production", "confidence": 0.87, "evidence_ids": ["ev_prod2_job2", "ev_prod2_project"]}], "summary": "脱敏候选人生产年限较长，现场与质量体系经验丰富，但量化成果较少。", "highest_degree": "本科", "major": "机械工程", "total_years_experience": 13, "current_level": "生产高级主管"},
+  "education_records": [{"school": "脱敏理工大学I", "degree": "本科", "major": "机械工程", "start_date": "2007-09", "end_date": "2011-06", "evidence_id": "ev_prod2_edu"}],
+  "career_records": [
+    {"company": "脱敏制造组织C", "title": "生产班组长", "start_date": "2011-07", "end_date": "2017-12", "description": "负责生产排班、质量巡检和班组安全。", "domain_tags": ["production"], "management_headcount": 18, "platform_evidence": ["多班组车间"], "evidence_ids": ["ev_prod2_job1"], "evidence_id": "ev_prod2_job1"},
+    {"company": "脱敏制造组织D", "title": "生产高级主管", "start_date": "2018-01", "end_date": "2025-12", "description": "负责SOP、TPM、质量复盘和跨班组协调。", "domain_tags": ["production"], "management_headcount": 45, "platform_evidence": ["多产线工厂"], "evidence_ids": ["ev_prod2_job2"], "evidence_id": "ev_prod2_job2"}
+  ],
+  "project_records": [{"project_name": "质量复盘机制建设", "start_date": "2019-03", "end_date": "2019-12", "description": "建立班组质量复盘例会和异常记录模板。", "domain_tags": ["production"], "evidence_ids": ["ev_prod2_project"], "evidence_id": "ev_prod2_project"}],
+  "achievement_events": [
+    {"achievement_id": "ach_prod2_001", "event_type": "quality_improvement", "metric_name": "质量异常闭环率", "metric_value": 96, "metric_value_upper": null, "unit": "%", "direction": "increase", "period_months": 12, "approximate": false, "lower_bound": false, "candidate_contribution": "负责质量复盘机制执行", "evidence_grade": "B", "evidence_id": "ev_prod2_ach1"},
+    {"achievement_id": "ach_prod2_002", "event_type": "organization_transformation", "metric_name": "现场管理改善", "metric_value": null, "metric_value_upper": null, "unit": null, "direction": "other", "period_months": null, "approximate": true, "lower_bound": false, "candidate_contribution": "参与SOP宣导和班组培训", "evidence_grade": "C", "evidence_id": "ev_prod2_ach2"}
+  ],
+  "domain_assessment_inputs": {"production": {"domain": "production", "matched_tags": ["生产计划", "质量管理", "SOP"], "competency_tags": ["生产计划", "质量管理", "安全与合规", "TPM", "SOP", "7S"], "collaboration_tags": ["跨部门协同", "人才培养"], "evidence_ids": ["ev_prod2_job1", "ev_prod2_job2", "ev_prod2_project", "ev_prod2_ach1"], "notes": "现场经验充足，量化成果相对有限。"}},
+  "evidence_items": [
+    {"evidence_id": "ev_prod2_edu", "section": "教育经历", "quote": "本科，机械工程专业。", "fact_type": "education", "used_for_scoring": true},
+    {"evidence_id": "ev_prod2_job1", "section": "工作经历", "quote": "负责生产排班、质量巡检和班组安全。", "fact_type": "career", "used_for_scoring": true},
+    {"evidence_id": "ev_prod2_job2", "section": "工作经历", "quote": "负责SOP、TPM、质量复盘和跨班组协调。", "fact_type": "career", "used_for_scoring": true},
+    {"evidence_id": "ev_prod2_project", "section": "项目经历", "quote": "建立班组质量复盘例会和异常记录模板。", "fact_type": "project", "used_for_scoring": true},
+    {"evidence_id": "ev_prod2_ach1", "section": "工作业绩", "quote": "质量异常闭环率达到96%。", "fact_type": "achievement", "used_for_scoring": true},
+    {"evidence_id": "ev_prod2_ach2", "section": "工作业绩", "quote": "参与现场管理改善。", "fact_type": "achievement", "used_for_scoring": false}
+  ],
+  "quality_flags": [{"flag_type": "missing_quantified_scope", "severity": "warning", "description": "现场改善成果缺少量化幅度。", "related_evidence_ids": ["ev_prod2_ach2"]}],
+  "llm_metadata": {"provider": "mock", "model_name": "mock_fixture_v1", "temperature": 0, "extracted_at": "2026-05-26T00:00:00Z"}
+}

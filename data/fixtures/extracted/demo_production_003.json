@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "doc_demo_production_003",
+  "candidate_id": "demo_production_003",
+  "parse_metadata": {"source_type": "mock_fixture", "parsed_at": "2026-05-26T00:00:00Z", "parser_version": "stage3_v1", "redacted_text_path": null, "source_filename": "demo_production_003_redacted.txt"},
+  "sensitive_information": {"name_detected": true, "gender": null, "birth_year": null, "marital_status": null, "salary_current": null, "salary_expected": null, "location": "[地域信息已脱敏]", "masked_for_scoring": true},
+  "candidate_profile": {"display_id": "CAND-PROD-003", "target_domains": ["production"], "target_domain_candidates": [{"domain": "production", "confidence": 0.84, "evidence_ids": ["ev_prod3_job3", "ev_prod3_ach1"]}], "summary": "脱敏候选人成长较快，自动化项目成果明显，但任职稳定性一般。", "highest_degree": "本科", "major": "自动化", "total_years_experience": 6, "current_level": "生产经理"},
+  "education_records": [{"school": "脱敏工程学院J", "degree": "本科", "major": "自动化", "start_date": "2014-09", "end_date": "2018-06", "evidence_id": "ev_prod3_edu"}],
+  "career_records": [
+    {"company": "脱敏制造组织E", "title": "工艺工程师", "start_date": "2018-07", "end_date": "2019-05", "description": "负责工艺参数记录和产线异常跟进。", "domain_tags": ["production"], "management_headcount": 0, "platform_evidence": ["单产线"], "evidence_ids": ["ev_prod3_job1"], "evidence_id": "ev_prod3_job1"},
+    {"company": "脱敏制造组织F", "title": "生产主管", "start_date": "2019-06", "end_date": "2021-02", "description": "升任生产主管，负责产线效率改善。", "domain_tags": ["production"], "management_headcount": 16, "platform_evidence": ["自动化产线"], "evidence_ids": ["ev_prod3_job2"], "evidence_id": "ev_prod3_job2"},
+    {"company": "脱敏制造组织G", "title": "生产经理", "start_date": "2021-03", "end_date": "2025-12", "description": "推动自动化改造、设备导入和跨部门交付。", "domain_tags": ["production"], "management_headcount": 40, "platform_evidence": ["新产线建设", "自动化设备"], "evidence_ids": ["ev_prod3_job3"], "evidence_id": "ev_prod3_job3"}
+  ],
+  "project_records": [{"project_name": "自动化检测设备导入", "start_date": "2022-02", "end_date": "2022-09", "description": "完成自动化检测设备选型、验证和上线。", "domain_tags": ["production"], "evidence_ids": ["ev_prod3_project"], "evidence_id": "ev_prod3_project"}],
+  "achievement_events": [
+    {"achievement_id": "ach_prod3_001", "event_type": "automation_upgrade", "metric_name": "检测效率提升", "metric_value": 28, "metric_value_upper": null, "unit": "%", "direction": "increase", "period_months": 8, "approximate": false, "lower_bound": false, "candidate_contribution": "主导设备导入和上线验证", "evidence_grade": "A", "evidence_id": "ev_prod3_ach1"},
+    {"achievement_id": "ach_prod3_002", "event_type": "loss_reduction", "metric_name": "返工率下降", "metric_value": 1.1, "metric_value_upper": null, "unit": "pct", "direction": "decrease", "period_months": 6, "approximate": false, "lower_bound": false, "candidate_contribution": "推动检测流程优化", "evidence_grade": "B", "evidence_id": "ev_prod3_ach2"}
+  ],
+  "domain_assessment_inputs": {"production": {"domain": "production", "matched_tags": ["自动化改造", "设备引入", "工艺优化"], "competency_tags": ["生产计划", "质量管理", "设备引入", "工艺优化", "自动化改造", "新车间或产线建设", "SOP"], "collaboration_tags": ["跨部门协同", "组织推动", "团队搭建"], "evidence_ids": ["ev_prod3_job2", "ev_prod3_job3", "ev_prod3_project", "ev_prod3_ach1", "ev_prod3_ach2"], "notes": "自动化成果强，早期任职较短。"}},
+  "evidence_items": [
+    {"evidence_id": "ev_prod3_edu", "section": "教育经历", "quote": "本科，自动化专业。", "fact_type": "education", "used_for_scoring": true},
+    {"evidence_id": "ev_prod3_job1", "section": "工作经历", "quote": "负责工艺参数记录和产线异常跟进。", "fact_type": "career", "used_for_scoring": true},
+    {"evidence_id": "ev_prod3_job2", "section": "工作经历", "quote": "升任生产主管，负责产线效率改善。", "fact_type": "career", "used_for_scoring": true},
+    {"evidence_id": "ev_prod3_job3", "section": "工作经历", "quote": "推动自动化改造、设备导入和跨部门交付。", "fact_type": "career", "used_for_scoring": true},
+    {"evidence_id": "ev_prod3_project", "section": "项目经历", "quote": "完成自动化检测设备选型、验证和上线。", "fact_type": "project", "used_for_scoring": true},
+    {"evidence_id": "ev_prod3_ach1", "section": "工作业绩", "quote": "检测效率提升28%。", "fact_type": "achievement", "used_for_scoring": true},
+    {"evidence_id": "ev_prod3_ach2", "section": "工作业绩", "quote": "返工率下降1.1个百分点。", "fact_type": "achievement", "used_for_scoring": true}
+  ],
+  "quality_flags": [],
+  "llm_metadata": {"provider": "mock", "model_name": "mock_fixture_v1", "temperature": 0, "extracted_at": "2026-05-26T00:00:00Z"}
+}

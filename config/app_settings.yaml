@@ -1,0 +1,11 @@
+version: "1.0.0"
+app:
+  name: "EviTalent-Rank"
+  default_domain: "hr"
+  default_mode: "mock"
+  database_url: "sqlite:///./data/evitalent.db"
+privacy:
+  redacted_placeholder: "[REDACTED]"
+  persist_redacted_text: true
+reporting:
+  default_top_k: 3

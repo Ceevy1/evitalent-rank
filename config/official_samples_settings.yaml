@@ -1,0 +1,44 @@
+version: "1.0.0"
+
+domains:
+  - brand
+  - ecommerce
+  - hr
+  - production
+  - rd
+  - sales
+
+input:
+  allowed_extensions:
+    - ".docx"
+    - ".doc"
+  private_data_root_env: "EVITALENT_PRIVATE_DATA_ROOT"
+  resume_input_root_env: "RESUME_INPUT_ROOT"
+
+pilot:
+  selector: "lowest_anonymous_document_id"
+  documents_per_domain: 1
+  require_manual_redaction_review: true
+  allow_llm_before_review: false
+
+processing:
+  extraction_mode: "local_ollama"
+  allow_mock_fallback: false
+  allow_cached_response: false
+  continue_on_single_document_failure: true
+  checkpoint_enabled: true
+  scoring_only_if_eligible: true
+
+security:
+  never_display_original_filename: true
+  never_display_raw_text: true
+  never_display_sensitive_values: true
+  store_private_evidence_quotes_outside_repo: true
+  store_safe_summary_without_evidence_quotes: true
+
+ranking:
+  use_fixed_v1_weights: true
+  adjust_weights_from_official_samples: false
+  target_domain_source: "folder_domain"
+  preserve_detected_domain_for_diagnostics: true
+  exclude_ineligible_documents: true

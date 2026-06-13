@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evitalent-rank"
+version = "0.1.0"
+description = "Evidence-constrained multi-domain talent competitiveness ranking system."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115,<0.116",
+  "uvicorn>=0.30,<0.31",
+  "streamlit",
+  "pydantic",
+  "pydantic-settings",
+  "python-docx",
+  "pypdf",
+  "pandas",
+  "pyyaml",
+  "jsonschema",
+  "sqlalchemy",
+  "plotly",
+  "jinja2",
+  "python-multipart",
+  "httpx",
+  "numpy",
+  "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-p no:anyio"
+markers = [
+  "integration: tests that require local external services such as Ollama",
+]

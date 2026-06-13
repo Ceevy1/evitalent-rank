@@ -1,0 +1,92 @@
+version: "1.0.0"
+
+domains:
+  ecommerce:
+    label: "电商"
+    weights:
+      education: 0.04
+      match: 0.08
+      experience: 0.08
+      stability: 0.05
+      progression: 0.05
+      platform: 0.05
+      management: 0.08
+      competency: 0.20
+      achievement: 0.32
+      collaboration: 0.05
+
+  brand:
+    label: "品牌"
+    weights:
+      education: 0.04
+      match: 0.10
+      experience: 0.08
+      stability: 0.05
+      progression: 0.05
+      platform: 0.05
+      management: 0.07
+      competency: 0.20
+      achievement: 0.31
+      collaboration: 0.05
+
+  hr:
+    label: "人力资源"
+    weights:
+      education: 0.06
+      match: 0.10
+      experience: 0.10
+      stability: 0.06
+      progression: 0.06
+      platform: 0.04
+      management: 0.10
+      competency: 0.22
+      achievement: 0.20
+      collaboration: 0.06
+
+  production:
+    label: "生产"
+    weights:
+      education: 0.06
+      match: 0.10
+      experience: 0.10
+      stability: 0.08
+      progression: 0.05
+      platform: 0.05
+      management: 0.09
+      competency: 0.22
+      achievement: 0.20
+      collaboration: 0.05
+
+  sales:
+    label: "销售"
+    weights:
+      education: 0.04
+      match: 0.08
+      experience: 0.08
+      stability: 0.05
+      progression: 0.06
+      platform: 0.05
+      management: 0.10
+      competency: 0.18
+      achievement: 0.31
+      collaboration: 0.05
+
+  rd:
+    label: "研发"
+    weights:
+      education: 0.08
+      match: 0.12
+      experience: 0.10
+      stability: 0.06
+      progression: 0.05
+      platform: 0.05
+      management: 0.08
+      competency: 0.24
+      achievement: 0.18
+      collaboration: 0.04
+
+ranking:
+  evidence_floor: 0.85
+  evidence_adjustment_weight: 0.15
+  max_penalty: 8.0
+  missing_axis_neutral_score: 50.0

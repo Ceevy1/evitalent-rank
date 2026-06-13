@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["raw_achievement_id", "raw_metric_name", "raw_achievement_text", "metric_value", "metric_value_upper", "unit", "period_months", "approximate", "lower_bound", "evidence_quote"],
+  "properties": {
+    "raw_achievement_id": {"type": "string"},
+    "raw_metric_name": {"type": "string"},
+    "raw_achievement_text": {"type": "string"},
+    "metric_value": {"type": ["number", "null"]},
+    "metric_value_upper": {"type": ["number", "null"]},
+    "unit": {"type": ["string", "null"]},
+    "period_months": {"type": ["integer", "null"]},
+    "approximate": {"type": "boolean"},
+    "lower_bound": {"type": "boolean"},
+    "evidence_quote": {"type": "string"}
+  },
+  "additionalProperties": false
+}

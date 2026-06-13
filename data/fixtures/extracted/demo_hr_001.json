@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "doc_demo_hr_001",
+  "candidate_id": "demo_hr_001",
+  "parse_metadata": {"source_type": "mock_fixture", "parsed_at": "2026-05-26T00:00:00Z", "parser_version": "stage3_v1", "redacted_text_path": null, "source_filename": "demo_hr_resume_redacted.txt"},
+  "sensitive_information": {"name_detected": true, "gender": null, "birth_year": null, "marital_status": null, "salary_current": null, "salary_expected": null, "location": "[地域信息已脱敏]", "masked_for_scoring": true},
+  "candidate_profile": {"display_id": "CAND-HR-001", "target_domains": ["hr"], "target_domain_candidates": [{"domain": "hr", "confidence": 0.94, "evidence_ids": ["ev_hr1_job2", "ev_hr1_ach1"]}], "summary": "脱敏候选人具备招聘交付、HRBP 和组织发展经验。", "highest_degree": "硕士", "major": "人力资源管理", "total_years_experience": 9, "current_level": "人力资源经理"},
+  "education_records": [{"school": "脱敏大学A", "degree": "硕士", "major": "人力资源管理", "start_date": "2011-09", "end_date": "2014-06", "evidence_id": "ev_hr1_edu"}],
+  "career_records": [
+    {"company": "脱敏消费品组织A", "title": "招聘主管", "start_date": "2015-07", "end_date": "2019-12", "description": "负责关键岗位招聘和招聘流程优化。", "domain_tags": ["hr"], "management_headcount": 6, "platform_evidence": ["多区域业务"], "evidence_ids": ["ev_hr1_job1"], "evidence_id": "ev_hr1_job1"},
+    {"company": "脱敏零售科技组织B", "title": "人力资源经理", "start_date": "2020-01", "end_date": "2025-12", "description": "推动组织设计、人才盘点、培训体系和绩效激励。", "domain_tags": ["hr"], "management_headcount": 12, "platform_evidence": ["千人规模业务单元"], "evidence_ids": ["ev_hr1_job2"], "evidence_id": "ev_hr1_job2"}
+  ],
+  "project_records": [{"project_name": "关键岗位画像与梯队建设", "start_date": "2021-03", "end_date": "2022-02", "description": "建立岗位画像、人才盘点和培养路径。", "domain_tags": ["hr"], "evidence_ids": ["ev_hr1_project"], "evidence_id": "ev_hr1_project"}],
+  "achievement_events": [
+    {"achievement_id": "ach_hr1_001", "event_type": "recruitment_delivery", "metric_name": "关键岗位到岗率", "metric_value": 92, "metric_value_upper": null, "unit": "%", "direction": "increase", "period_months": 12, "approximate": false, "lower_bound": false, "candidate_contribution": "主导招聘策略和渠道组合", "evidence_grade": "A", "evidence_id": "ev_hr1_ach1"},
+    {"achievement_id": "ach_hr1_002", "event_type": "retention_improvement", "metric_name": "核心员工流失率下降", "metric_value": 8, "metric_value_upper": null, "unit": "pct", "direction": "decrease", "period_months": 12, "approximate": false, "lower_bound": false, "candidate_contribution": "推动激励和人才培养机制", "evidence_grade": "A", "evidence_id": "ev_hr1_ach2"}
+  ],
+  "domain_assessment_inputs": {"hr": {"domain": "hr", "matched_tags": ["招聘配置", "HRBP 业务支持", "组织发展"], "competency_tags": ["招聘配置", "关键岗位招聘", "到岗率", "组织设计", "人才盘点", "梯队建设", "培训体系", "绩效激励", "流失率改善", "HRBP 业务支持"], "collaboration_tags": ["跨部门协同", "团队搭建", "人才培养", "组织推动"], "evidence_ids": ["ev_hr1_job1", "ev_hr1_job2", "ev_hr1_project", "ev_hr1_ach1", "ev_hr1_ach2"], "notes": "HR 领域证据充分。"}},
+  "evidence_items": [
+    {"evidence_id": "ev_hr1_edu", "section": "教育经历", "quote": "硕士，人力资源管理专业。", "fact_type": "education", "used_for_scoring": true},
+    {"evidence_id": "ev_hr1_job1", "section": "工作经历", "quote": "负责关键岗位招聘和招聘流程优化。", "fact_type": "career", "used_for_scoring": true},
+    {"evidence_id": "ev_hr1_job2", "section": "工作经历", "quote": "推动组织设计、人才盘点、培训体系和绩效激励。", "fact_type": "career", "used_for_scoring": true},
+    {"evidence_id": "ev_hr1_project", "section": "项目经历", "quote": "建立岗位画像、人才盘点和培养路径。", "fact_type": "project", "used_for_scoring": true},
+    {"evidence_id": "ev_hr1_ach1", "section": "工作业绩", "quote": "关键岗位到岗率达到92%。", "fact_type": "achievement", "used_for_scoring": true},
+    {"evidence_id": "ev_hr1_ach2", "section": "工作业绩", "quote": "核心员工流失率下降8个百分点。", "fact_type": "achievement", "used_for_scoring": true}
+  ],
+  "quality_flags": [],
+  "llm_metadata": {"provider": "mock", "model_name": "mock_fixture_v1", "temperature": 0, "extracted_at": "2026-05-26T00:00:00Z"}
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "doc_demo_ecommerce_001",
+  "candidate_id": "demo_ecommerce_001",
+  "parse_metadata": {"source_type": "fixture", "parsed_at": "2026-05-25T00:00:00Z", "parser_version": "v1", "redacted_text_path": null},
+  "sensitive_information": {"name_present": false, "gender": null, "birth_date_present": false, "age_present": false, "marital_status_present": false, "family_status_present": false, "native_place_present": false, "current_salary_present": false, "expected_salary_present": false, "redaction_notes": []},
+  "candidate_profile": {"display_id": "CAND-ECOM-001", "target_domains": ["ecommerce"], "summary": "电商运营负责人，覆盖天猫、京东、抖音与私域。", "highest_degree": "本科", "major": "电子商务", "total_years_experience": 10, "current_level": "电商运营总监"},
+  "education_records": [{"school": "脱敏大学C", "degree": "本科", "major": "电子商务", "start_date": "2010-09", "end_date": "2014-06", "evidence_id": "ev_ecom_edu"}],
+  "career_records": [
+    {"company": "脱敏服饰公司", "title": "天猫运营经理", "start_date": "2014-07", "end_date": "2019-06", "description": "负责天猫、京东店铺运营和转化率优化。", "domain_tags": ["ecommerce"], "management_headcount": 10, "platform_evidence": ["天猫", "京东"], "evidence_id": "ev_ecom_job1"},
+    {"company": "脱敏新消费集团", "title": "电商运营总监", "start_date": "2019-07", "end_date": "2025-12", "description": "管理抖音、快手、小红书和私域团队，推动全渠道融合。", "domain_tags": ["ecommerce"], "management_headcount": 38, "platform_evidence": ["抖音", "快手", "小红书", "私域"], "evidence_id": "ev_ecom_job2"}
+  ],
+  "project_records": [{"project_name": "直播与达人矩阵增长项目", "start_date": "2022-01", "end_date": "2022-12", "description": "搭建直播排期、达人分层和短视频内容机制。", "domain_tags": ["ecommerce"], "evidence_id": "ev_ecom_project"}],
+  "achievement_events": [
+    {"achievement_id": "ach_ecom_001", "event_type": "gmv_growth", "metric_name": "年度 GMV", "metric_value": 6200, "metric_value_upper": null, "unit": "万元", "direction": "increase", "period_months": 12, "approximate": false, "lower_bound": false, "candidate_contribution": "主导平台运营和内容增长", "evidence_grade": "A", "evidence_id": "ev_ecom_ach1"},
+    {"achievement_id": "ach_ecom_002", "event_type": "conversion_improvement", "metric_name": "店铺转化率提升", "metric_value": 21, "metric_value_upper": null, "unit": "%", "direction": "increase", "period_months": 8, "approximate": false, "lower_bound": false, "candidate_contribution": "优化货品和页面链路", "evidence_grade": "A", "evidence_id": "ev_ecom_ach2"}
+  ],
+  "domain_assessment_inputs": {"ecommerce": {"domain": "ecommerce", "matched_tags": ["平台运营", "GMV 与销售增长", "直播"], "competency_tags": ["平台运营", "天猫", "京东", "抖音", "快手", "小红书", "私域", "GMV 与销售增长", "转化率", "直播", "达人", "短视频", "内容营销", "团队规模", "新零售", "全渠道融合"], "collaboration_tags": ["跨部门协同", "团队搭建", "组织推动"], "evidence_ids": ["ev_ecom_job1", "ev_ecom_job2", "ev_ecom_project", "ev_ecom_ach1", "ev_ecom_ach2"], "notes": "电商平台覆盖度和量化成果突出。"}},
+  "evidence_items": [
+    {"evidence_id": "ev_ecom_edu", "quote": "本科，电子商务专业。", "source_section": "教育经历"},
+    {"evidence_id": "ev_ecom_job1", "quote": "负责天猫、京东店铺运营和转化率优化。", "source_section": "工作经验"},
+    {"evidence_id": "ev_ecom_job2", "quote": "管理抖音、快手、小红书和私域团队。", "source_section": "工作经验"},
+    {"evidence_id": "ev_ecom_project", "quote": "搭建直播排期、达人分层和短视频内容机制。", "source_section": "项目经验"},
+    {"evidence_id": "ev_ecom_ach1", "quote": "年度 GMV 达到6200万元。", "source_section": "工作业绩"},
+    {"evidence_id": "ev_ecom_ach2", "quote": "店铺转化率提升21%。", "source_section": "工作业绩"}
+  ],
+  "quality_flags": [],
+  "llm_metadata": {"mode": "mock", "model": null, "temperature": 0, "extracted_at": "2026-05-25T00:00:00Z"}
+}

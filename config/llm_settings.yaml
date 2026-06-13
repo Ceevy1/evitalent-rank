@@ -1,0 +1,28 @@
+version: "1.0.0"
+default_provider: mock
+
+providers:
+  mock:
+    enabled_by_default: true
+    requires_network: false
+  local_ollama:
+    enabled_by_default: false
+    base_url: "http://localhost:11434/v1"
+    api_key: "ollama"
+    default_model: "qwen2.5:7b"
+    temperature: 0
+    timeout_seconds: 60
+    max_retries: 1
+  compatible_api:
+    enabled_by_default: false
+    base_url: ""
+    api_key: ""
+    default_model: ""
+    temperature: 0
+    timeout_seconds: 60
+    max_retries: 1
+
+privacy:
+  require_redaction_before_llm: true
+  allow_raw_resume_to_llm: false
+  save_failed_outputs_to_extracted: false

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["target_domains", "candidate_summary_tags", "highest_role_level", "education_records", "career_records", "project_records", "quality_flags"],
+  "properties": {
+    "target_domains": {"type": "array", "items": {"type": "string"}},
+    "candidate_summary_tags": {"type": "array", "items": {"type": "string"}},
+    "highest_role_level": {"type": "string"},
+    "education_records": {"type": "array"},
+    "career_records": {"type": "array"},
+    "project_records": {"type": "array"},
+    "quality_flags": {"type": "array"}
+  },
+  "additionalProperties": true
+}
